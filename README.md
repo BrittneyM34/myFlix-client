@@ -1,6 +1,6 @@
 # MyFlix Movie App
 
-Welcome to MyFlix, a web application that allows users to explore a collection of movies, manage their favorite movies, and update their user profile.
+MyFlix is web application that allows users to explore a collection of movies, manage their favorite movies, and update their user profile.
 
 ## Overview
 
