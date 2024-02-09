@@ -9,24 +9,31 @@ export const MainView = () => {
             title: "17 Again",
             description:
                 "Mike O'Donnell (Matthew Perry) was a high-school basketball star with a bright future, but he threw it all away to marry his girlfriend and raise their child. Almost 20 years later, Mike'/s marriage has failed, his kids think he'/s a loser, and his job is going nowhere. He gets a chance to correct the mistakes of his past and change his life when he is miraculously transformed into a teenager (Zac Efron), but in trying to fix his past, Mike may be jeopardizing his present and future.",
-            genre: "Comedy",
+            genre: {
+                Name: "Comedy",
+                Description: "Comedy is a genre of film in which the main emphasis is on humor. These films are designed to make the audience laugh through amusement and most often work by exaggerating characteristics for humorous effect.",
+            },
             director: {
                 Name: "Burr Steers",
                 Bio: "Burr Gore Steers is an American actor, screenwriter, and director. His films include Igby Goes Down and 17 Again.",
                 Birth: "1965"
             },
-            image: "https://upload.wikimedia.org/wikipedia/en/e/e1/17again.jpg",
+            image:
+                "https://upload.wikimedia.org/wikipedia/en/e/e1/17again.jpg",
         },
         {
             id: 2,
             title: "Us",
             description:
                 "The film follows Adelaide Wilson (Nyong'o) and her family, who are attacked by a group of menacing doppelgängers, called the 'Tethered'.",
-            genre: "Horror",
+            genre: {
+                Name: "Horror",
+                Description: "A large and heterogeneous group of films that, via the representation of disturbing, violent, and dark subject matter, seek to elicit responses of fear, terror, disgust, shock, suspense, and, of course, horror from their viewers."
+            },
             director: {
                 Name: "Jordan Peele",
                 Bio: "American comedian, writer, director, and producer who was known for creating both comedy and horror films and TV shows that address popular culture and social issues, especially race relations.",
-                Birth:"1979"
+                Birth: "1979"
             },
             image:
                 "https://play-lh.googleusercontent.com/3a6ZV1MgQ4iLwpU0rWUO-KO0VVW0NdEj7V8xjNk-mraZ66SIXbO-Ca08uUm82KnCPyzQowGr5bHGsgJAuZ0",
@@ -36,14 +43,17 @@ export const MainView = () => {
             title: "Grown Ups",
             description:
                 "The film tells a story of five lifelong friends who won their junior high school basketball championship in 1978. They reunite three decades later for a 4th of July weekend after learning about the sudden death of their basketball coach.",
-            genre: "Comedy",
+            genre: {
+                Name: "Comedy",
+                Description: "Comedy is a genre of film in which the main emphasis is on humor. These films are designed to make the audience laugh through amusement and most often work by exaggerating characteristics for humorous effect.",
+            },
             director: {
                 Name: "Dennis Dugan",
                 Bio: "Dennis Barton Dugan is an American film director, actor, comedian and screenwriter from Wheaton, Illinois who directed several films featuring Adam Sandler including Happy Gilmore, Big Daddy, Jack & Jill, Grown Ups, I Now Pronounce You Chuck & Larry and You Don't Mess With the Zohan.",
-                Birth:"1946"
+                Birth: "1946"
             },
             image:
-                "https://m.media-amazon.com/images/M/MV5BMjA0ODYwNzU5Nl5BMl5BanBnXkFtZTcwNTI1MTgxMw@@._V1_.jpg",
+                "https://m.media-amazon.com/images/I/91-fSdjL09L._AC_UF894,1000_QL80_.jpg",
         },
     ]);
 
