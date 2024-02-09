@@ -20,6 +20,7 @@ export const MainView = () => {
             },
             image:
                 "https://upload.wikimedia.org/wikipedia/en/e/e1/17again.jpg",
+            featured: "True"
         },
         {
             id: 2,
@@ -37,6 +38,7 @@ export const MainView = () => {
             },
             image:
                 "https://play-lh.googleusercontent.com/3a6ZV1MgQ4iLwpU0rWUO-KO0VVW0NdEj7V8xjNk-mraZ66SIXbO-Ca08uUm82KnCPyzQowGr5bHGsgJAuZ0",
+            featured: "True"
         },
         {
             id: 3,
@@ -54,6 +56,7 @@ export const MainView = () => {
             },
             image:
                 "https://m.media-amazon.com/images/I/91-fSdjL09L._AC_UF894,1000_QL80_.jpg",
+            featured: "True"
         },
     ]);
 
