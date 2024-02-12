@@ -17,12 +17,18 @@ export const MainView = () => {
                     id: movie._id,
                     title: movie.title,
                     description: movie.description,
-                    genre: movie.genreName,
-                    director: movie.directorName,
-                    featured: movie.featured
-                };
-            });
-
+                    genre: {
+                        genreName: movie.genre.name,
+                        description: movie.genre.description
+                      },
+                      director: {
+                        directorName: movie.director.directorName,
+                        bio: movie.director.bio,
+                        birth: movie.director.birth
+                      },
+                      featured: movie.featured,
+                    };
+                  });
             setMovies(moviesFromApi);
         });
     }, []);
