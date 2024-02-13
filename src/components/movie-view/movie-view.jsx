@@ -1,4 +1,5 @@
 export const MovieView = ({ movie, onBackClick }) => {
+  console.log(movie);
   return (
     <div>
       <div>
@@ -27,12 +28,6 @@ export const MovieView = ({ movie, onBackClick }) => {
           <b>Director: </b>
         </span>
         <span>{movie.director.name}</span>
-      </div>
-      <div>
-        <span>
-          <b>Featured: </b>
-        </span>
-        <span>{movie.featured}</span>
       </div>
       <button onClick={onBackClick}>Back</button>
     </div>

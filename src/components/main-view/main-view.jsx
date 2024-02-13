@@ -11,22 +11,22 @@ export const MainView = () => {
         fetch("https://my-movies-8ed51d856f3e.herokuapp.com/movies")
         .then((response) => response.json())
         .then((data) => {
+            console.log(data);
             const moviesFromApi = data.map((movie) => {
                 return {
-                    imagePath: movie.imagePath,
-                    id: movie._id,
+                    imagePath: movie.imagePath || 'default-image-path.jpg', 
+                    _id: movie._id,
                     title: movie.title,
                     description: movie.description,
                     genre: {
-                        genreName: movie.genre.name,
+                        name: movie.genre.name,
                         description: movie.genre.description
                       },
                       director: {
-                        directorName: movie.director.directorName,
+                        name: movie.director.name,
                         bio: movie.director.bio,
                         birth: movie.director.birth
                       },
-                      featured: movie.featured,
                     };
                   });
             setMovies(moviesFromApi);
@@ -50,7 +50,7 @@ export const MainView = () => {
         <div>
             {movies.map((movie) => (
                 <MovieCard
-                    key={movie.id}
+                    key={movie._id}
                     movie={movie}
                     onMovieClick={(newSelectedMovie) => {
                         setSelectedMovie(newSelectedMovie);
@@ -60,3 +60,4 @@ export const MainView = () => {
         </div>
     );
 };
+
