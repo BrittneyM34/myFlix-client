@@ -10,10 +10,10 @@ export const SignupView = () => {
         event.preventDefault();
 
         const data = {
-            Username: username,
-            Password: password,
-            Email: email,
-            Birthday: birthday
+            username: username,
+            password: password,
+            email: email,
+            birthday: birthday
         };
 
         fetch("https://my-movies-8ed51d856f3e.herokuapp.com/users",
