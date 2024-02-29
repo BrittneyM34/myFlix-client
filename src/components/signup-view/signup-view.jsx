@@ -91,7 +91,7 @@ export const SignupView = () => {
                       value={birthday}
                       onChange={(e) => setBirthday(e.target.value)}
                       required
-                      placeholder="Birthday (YYYY-MM-DD)"
+                      placeholder="Birthday (DD-MM-YYY)"
                     />
                   </Form.Group>
                   <Button variant="primary" type="submit">

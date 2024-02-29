@@ -30847,7 +30847,7 @@ const SignupView = ()=>{
                                                     value: birthday,
                                                     onChange: (e)=>setBirthday(e.target.value),
                                                     required: true,
-                                                    placeholder: "Birthday (YYYY-MM-DD)"
+                                                    placeholder: "Birthday (DD-MM-YYY)"
                                                 }, void 0, false, {
                                                     fileName: "src/components/signup-view/signup-view.jsx",
                                                     lineNumber: 89,
