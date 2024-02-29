@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import {
   Form,
   Button,
@@ -9,40 +10,37 @@ import {
   CardGroup,
 } from "react-bootstrap";
 
-export const LoginView = ({ onLoggedIn }) => {
+export const SignupView = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+  const [birthday, setBirthday] = useState("");
 
   const handleSubmit = (event) => {
-    // This prevents the default behavior of the form which is to reload the entire page
     event.preventDefault();
 
     const data = {
-      access: username,
-      secret: password,
+      username: username,
+      password: password,
+      email: email,
+      birthday: birthday,
     };
 
-    fetch("https://my-movies-8ed51d856f3e.herokuapp.com/login", {
+    fetch("https://my-movies-8ed51d856f3e.herokuapp.com/users", 
+    {
       method: "POST",
+      body: JSON.stringify(data),
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(data),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("Login response: ", data);
-        if (data.user) {
-          localStorage.setItem("user", JSON.stringify(data.user));
-          localStorage.setItem("token", data.token);
-          onLoggedIn(data.user, data.token);
-        } else {
-          alert("No such user");
-        }
-      })
-      .catch((e) => {
-        alert("Something went wrong!");
-      });
+    }).then((response) => {
+      if (response.ok) {
+        alert("Signup successful");
+        window.location.reload();
+      } else {
+        alert("Signup failed");
+      }
+    });
   };
 
   return (
@@ -52,7 +50,7 @@ export const LoginView = ({ onLoggedIn }) => {
           <CardGroup>
             <Card>
               <Card.Body>
-                <Card.Title>Login Here</Card.Title>
+                <Card.Title> Sign Up Here</Card.Title>
                 <Form onSubmit={handleSubmit}>
                   <Form.Group controlId="formUsername">
                     <Form.Label>Username:</Form.Label>
@@ -61,6 +59,7 @@ export const LoginView = ({ onLoggedIn }) => {
                       value={username}
                       onChange={(e) => setUsername(e.target.value)}
                       required
+                      minLength="3"
                       placeholder="Username"
                     />
                   </Form.Group>
@@ -71,7 +70,28 @@ export const LoginView = ({ onLoggedIn }) => {
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
                       required
-                      placeholder="Password"
+                      minLength="8"
+                      placeholder="Your password must be 8 or more characters"
+                    />
+                  </Form.Group>
+                  <Form.Group controlId="formEmail">
+                    <Form.Label>Email:</Form.Label>
+                    <Form.Control
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                      placeholder="Email"
+                    />
+                  </Form.Group>
+                  <Form.Group controlId="formBirthday">
+                    <Form.Label>Birthday:</Form.Label>
+                    <Form.Control
+                      type="date"
+                      value={birthday}
+                      onChange={(e) => setBirthday(e.target.value)}
+                      required
+                      placeholder="Birthday (YYYY-MM-DD)"
                     />
                   </Form.Group>
                   <Button variant="primary" type="submit">
