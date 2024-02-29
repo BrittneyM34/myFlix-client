@@ -37,11 +37,11 @@ export const LoginView = ({ onLoggedIn }) => {
           localStorage.setItem("token", data.token);
           onLoggedIn(data.user, data.token);
         } else {
-          alert("No such user");
+          alert("No such user" + e.message);
         }
       })
       .catch((e) => {
-        alert("Something went wrong!");
+        alert("Something went wrong!" + e.message);
       });
   };
 

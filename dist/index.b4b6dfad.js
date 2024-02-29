@@ -30557,9 +30557,9 @@ const LoginView = ({ onLoggedIn })=>{
                 localStorage.setItem("user", JSON.stringify(data.user));
                 localStorage.setItem("token", data.token);
                 onLoggedIn(data.user, data.token);
-            } else alert("No such user");
-        }).catch((e)=>{
-            alert("Something went wrong!");
+            } else alert("No such user" + e.message);
+        }).catch((e1)=>{
+            alert("Something went wrong!" + e1.message);
         });
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Container), {
@@ -30592,7 +30592,7 @@ const LoginView = ({ onLoggedIn })=>{
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Control, {
                                                     type: "text",
                                                     value: username,
-                                                    onChange: (e)=>setUsername(e.target.value),
+                                                    onChange: (e1)=>setUsername(e1.target.value),
                                                     required: true,
                                                     placeholder: "Username"
                                                 }, void 0, false, {
@@ -30619,7 +30619,7 @@ const LoginView = ({ onLoggedIn })=>{
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Control, {
                                                     type: "password",
                                                     value: password,
-                                                    onChange: (e)=>setPassword(e.target.value),
+                                                    onChange: (e1)=>setPassword(e1.target.value),
                                                     required: true,
                                                     placeholder: "Password"
                                                 }, void 0, false, {
