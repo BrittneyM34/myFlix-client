@@ -12,6 +12,7 @@ export const ProfileView = ({ user, movies, setUser, removeFav, addFav }) => {
     const [username, setUsername] = useState(user.username);
     const [email, setEmail] = useState(user.email);
     const [birthday, setBirthday] = useState(user.birthday);
+    const [password, setPassword] = useState("");
 
     // Navigate
     const navigate = useNavigate();
@@ -127,6 +128,15 @@ export const ProfileView = ({ user, movies, setUser, removeFav, addFav }) => {
                                 value={birthday}
                                 onChange={(e) => setBirthday(e.target.value)}
                             />
+                        </Form.Group>
+                        <Form.Group controlId="formPassword">
+                            <Form.Label>Password:</Form.Label>
+                            <Form.Control
+                            className="mb-2"
+                            ttype="password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}>
+                            </Form.Control>
                         </Form.Group>
                         <Button type="submit" onClick={handleUpdate} className="mt-3 me-2">
                             Update

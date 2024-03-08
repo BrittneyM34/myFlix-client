@@ -163,7 +163,7 @@ export const MainView = () => {
                   <Col md={8}>
                     <MovieView 
                       movies={movies}
-                      removeFave={removeFav}
+                      removeFav={removeFav}
                       addFav={addFav} />
                   </Col>
                 )}
