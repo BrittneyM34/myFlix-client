@@ -1,19 +1,27 @@
 // Here you import the PropTypes library
-import React from "react";
+import React, {useState, useEffect} from "react";
 import PropTypes from "prop-types";
 import { Button, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-export const MovieCard = ({ movie, addFav, removeFav, isFavorite }) => {
+export const MovieCard = ({ movie, addFav, removeFav, user }) => {
+  const [isFavorite, setIsFavorite ] = useState(false);
+
+  useEffect(() => {
+    if (user.favoriteMovies && user.favoriteMovies.includes(movie._id)) {
+      setIsFavorite(true);
+    }
+  }, [user]);
+
   return (
     <Card className="h-100">
       <div className="position-relative .d-inline-block">
         <Card.Img variant="top" src={movie.imagePath} />
         <div>
           {isFavorite ? (
-            <Button onClick={() => removeFav(movie._id)} />
+            <Button onClick={() => removeFav(movie._id)}> Remove from favorites</Button>
           ) : (
-            <Button onClick={() => addFav(movie._id)} />
+            <Button onClick={() => addFav(movie._id)}>Add to favorites</Button>
           )}
         </div>
       </div>

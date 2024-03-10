@@ -45,11 +45,11 @@ export const MovieView = ({ movies, removeFav, addFav }) => {
           <div>
             {user.favoriteMovies.includes(movie._id) ? (
               <Button className="my-2 me-2" onClick={() => removeFav(movie._id)}>
-                Remove from Favorites
+                Remove from favorites
               </Button>
             ) : (
               <Button className="my-2 me-2" onClick={() => addFav(movie._id)}>
-                Add to Favorites
+                Add to favorites
               </Button>
             )}
           </div>
@@ -58,7 +58,7 @@ export const MovieView = ({ movies, removeFav, addFav }) => {
           </Link>
         </Col>
       </Row>
-   <Row className="justify-content-center">
+   {/* <Row className="justify-content-center">
         <Col>
         <MovieCard
                 movie={movie}
@@ -67,7 +67,7 @@ export const MovieView = ({ movies, removeFav, addFav }) => {
                 isFavorite={user.favoriteMovies.includes(movie._id)}
               />
             </Col>
-    </Row>
+    </Row> */}
     </>
     );
 };

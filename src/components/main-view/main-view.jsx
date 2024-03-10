@@ -29,7 +29,7 @@ export const MainView = () => {
       .then((data) => {
         const moviesFromApi = data.map((movie) => {
           return {
-            imagePath: movie.imagePath || "default-image-path.jpg",
+            imagePath: movie.ImagePath || "default-image-path.jpg",
             _id: movie._id,
             title: movie.title,
             description: movie.description,
@@ -183,7 +183,12 @@ export const MainView = () => {
                   <>
                     {movies.map((movie) => (
                       <Col className="mb-4" key={movie._id} md={3}>
-                        <MovieCard movie={movie} />
+                        <MovieCard 
+                        user={user}
+                        addFav={addFav}
+                        removeFav={removeFav}
+                        movie={movie}
+                         />
                       </Col>
                     ))}
                   </>
