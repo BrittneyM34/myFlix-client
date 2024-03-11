@@ -29,7 +29,13 @@ export const LoginView = ({ onLoggedIn }) => {
             },
             body: JSON.stringify(data),
         })
-            .then((response) => response.json())
+            .then((response) => {
+                if (!response.ok) {
+                    // If the response is not OK, throw an error.
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.json(); // Continue with processing the response if it's ok.
+            })
             .then((data) => {
                 console.log("Login response: ", data);
                 if (data.user) {
