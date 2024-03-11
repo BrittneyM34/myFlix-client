@@ -5,7 +5,7 @@ import { Button, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 export const MovieCard = ({ movie, addFav, removeFav, user }) => {
-  const [isFavorite, setIsFavorite ] = useState(false);
+  const [isFavorite, setIsFavorite] = useState(false);
 
   useEffect(() => {
     if (user.favoriteMovies && user.favoriteMovies.includes(movie._id)) {

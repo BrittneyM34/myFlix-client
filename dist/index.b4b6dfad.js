@@ -27740,7 +27740,7 @@ const MovieCard = ({ movie, addFav, removeFav, user })=>{
         columnNumber: 5
     }, undefined);
 };
-_s(MovieCard, "qhEuD5E7gjJ+rXIUfvwIXoG3VXY=");
+_s(MovieCard, "lh6fxD9+vLbuebOO0x4Y5WwBqk4=");
 _c = MovieCard;
 // Here is where we define all the props constraints for the MovieCard
 MovieCard.propTypes = {
@@ -42129,6 +42129,7 @@ const ProfileView = ({ user, movies, setUser, removeFav, addFav })=>{
                                 xl: 2,
                                 className: "mx-2 mt-2 mb-5 col-6 similar-movies-img",
                                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _movieCard.MovieCard), {
+                                    user: user,
                                     movie: movie,
                                     removeFav: removeFav,
                                     addFav: addFav,
@@ -42147,12 +42148,12 @@ const ProfileView = ({ user, movies, setUser, removeFav, addFav })=>{
                                 children: "There are no favorite movies"
                             }, void 0, false, {
                                 fileName: "src/components/profile-view/profile-view.jsx",
-                                lineNumber: 176,
+                                lineNumber: 177,
                                 columnNumber: 29
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/profile-view/profile-view.jsx",
-                            lineNumber: 175,
+                            lineNumber: 176,
                             columnNumber: 25
                         }, undefined)
                     }, void 0, false, {

@@ -132,10 +132,10 @@ export const ProfileView = ({ user, movies, setUser, removeFav, addFav }) => {
                         <Form.Group controlId="formPassword">
                             <Form.Label>Password:</Form.Label>
                             <Form.Control
-                            className="mb-2"
-                            ttype="password"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}>
+                                className="mb-2"
+                                ttype="password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}>
                             </Form.Control>
                         </Form.Group>
                         <Button type="submit" onClick={handleUpdate} className="mt-3 me-2">
@@ -164,6 +164,7 @@ export const ProfileView = ({ user, movies, setUser, removeFav, addFav }) => {
                                 key={movie._id}
                             >
                                 <MovieCard
+                                    user={user}
                                     movie={movie}
                                     removeFav={removeFav}
                                     addFav={addFav}
