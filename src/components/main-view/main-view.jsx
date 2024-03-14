@@ -49,6 +49,23 @@ export const MainView = () => {
         setMovies(moviesFromApi);
       });
   }, [token]);
+  
+  const handleSearch= (e) => {
+
+    const query = e.target.value;
+    setQuery(query);
+
+    const storedMovies = JSON.parse(localStorage.getItem("movies"));
+
+    const filteredMovies = storedMovies.filter((movie) => {
+      return ( 
+        movie.title.toLowerCase().inclues(query.to.LowerCase()) ||
+        movie.genre.some((genre) => genre.toLowerCase().includes(query.toLowerCase()))
+      );
+    })
+
+    setMovies(filteredMovies);
+  }
 
   // Add Favorite Movie
   const addFav = (id) => {
@@ -109,6 +126,9 @@ export const MainView = () => {
     <BrowserRouter>
       <NavigationBar
         user={user}
+        query={query}
+        handleSearch={handleSearch}
+        movies={movies}
         onLoggedOut={() => {
           setUser(null);
           localStorage.removeItem("token");
