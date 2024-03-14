@@ -109,6 +109,11 @@ export const MainView = () => {
     <BrowserRouter>
       <NavigationBar
         user={user}
+<<<<<<< Updated upstream
+=======
+        handleSearch={handleSearch}
+        movies={movies}
+>>>>>>> Stashed changes
         onLoggedOut={() => {
           setUser(null);
           localStorage.removeItem("token");
