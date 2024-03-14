@@ -145,7 +145,7 @@ export const ProfileView = ({ user, movies, setUser, removeFav, addFav }) => {
                             onClick={handleDelete}
                             className="mt-3 bg-blue border-blue text-white"
                         >
-                            Delete
+                            Delete account
                         </Button>
                     </Form>
                 </Col>
