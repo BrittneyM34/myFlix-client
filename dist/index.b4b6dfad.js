@@ -27249,7 +27249,7 @@ const MainView = ()=>{
     // Add Favorite Movie
     const addFav = (id)=>{
         fetch(`https://my-movies-8ed51d856f3e.herokuapp.com/users/${user.username}/movies/${id}`, {
-            method: "PUT",
+            method: "POST",
             headers: {
                 Authorization: `Bearer ${token}`
             }
