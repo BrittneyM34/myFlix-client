@@ -56,7 +56,6 @@ export const MainView = () => {
   const handleSearch = (e) => {
     
     const query = e.target.value;
- 
     setQuery(query);
 
    movies.forEach (item=>{
