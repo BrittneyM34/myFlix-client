@@ -17,13 +17,6 @@ export const MovieCard = ({ movie, addFav, removeFav, user }) => {
     <Card className="h-100">
       <div className="position-relative .d-inline-block">
         <Card.Img variant="top" src={movie.imagePath} />
-        <div>
-          {isFavorite ? (
-            <Button onClick={() => removeFav(movie._id)}> Remove from favorites</Button>
-          ) : (
-            <Button onClick={() => addFav(movie._id)}>Add to favorites</Button>
-          )}
-        </div>
       </div>
       <Card.Body>
         <Card.Title>{movie.title}</Card.Title>
@@ -32,6 +25,13 @@ export const MovieCard = ({ movie, addFav, removeFav, user }) => {
           <Button variant="link">Open</Button>
         </Link>
       </Card.Body>
+      <div>
+          {isFavorite ? (
+            <Button onClick={() => removeFav(movie._id)}> Remove from favorites</Button>
+          ) : (
+            <Button onClick={() => addFav(movie._id)}>Add to favorites</Button>
+          )}
+        </div>
     </Card>
   );
 };

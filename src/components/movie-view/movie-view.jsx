@@ -18,7 +18,9 @@ export const MovieView = ({ movies, removeFav, addFav }) => {
     <>
       <Row className="my-5 justify-content-md-center">
       <Col>
-        <img src={movie.imagePath} />
+        <img  height={500}
+        width={300}
+        src={movie.imagePath} />
        </Col>
       <Col md={5} className="col-12">
         <div>
@@ -58,16 +60,6 @@ export const MovieView = ({ movies, removeFav, addFav }) => {
           </Link>
         </Col>
       </Row>
-   {/* <Row className="justify-content-center">
-        <Col>
-        <MovieCard
-                movie={movie}
-                removeFav={removeFav}
-                addFav={addFav}
-                isFavorite={user.favoriteMovies.includes(movie._id)}
-              />
-            </Col>
-    </Row> */}
     </>
     );
 };

@@ -1,5 +1,7 @@
-import { Navbar, Container, Nav } from "react-bootstrap";
+import { Navbar, Container, Nav, Form, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+import { Route, Routes } from "react-router-dom";
 
 import { SearchBar } from "../search-bar/search-bar";
 

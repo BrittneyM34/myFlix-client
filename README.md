@@ -11,7 +11,7 @@ MyFlix is a full-stack application built with React, Node.js, Express, and Mongo
 - **User Authentication**: Users can sign up, log in, and log out securely.
 - **User Profile**: Users can view and update their profile information, including username, password, email, and date of birth.
 - **Favorite Movies**: Users can add and remove movies from their list of favorite movies.
-- **Movie Catalog**: Users can explore a catalog of movies, view movie details, and search for movies based on genre and director.
+- **Movie Catalog**: Users can explore a catalog of movies, view movie details, and search for movies based on title.
 
 ## Technology Used
 - **Frontend**: React

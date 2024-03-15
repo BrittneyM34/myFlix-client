@@ -9,6 +9,7 @@ import { LoginView } from "../login-view/login-view";
 import { SignupView } from "../signup-view/signup-view";
 import { NavigationBar } from "../navigation-bar/navigation-bar";
 import { ProfileView } from "../profile-view/profile-view";
+import { forEach, values } from "lodash";
 
 export const MainView = () => {
   const storedUser = JSON.parse(localStorage.getItem("user"));
@@ -17,6 +18,7 @@ export const MainView = () => {
   const [selectedMovie, setSelectedMovie] = useState(null);
   const [user, setUser] = useState(storedUser ? storedUser : null);
   const [token, setToken] = useState(storedToken ? storedToken : null);
+  const [query, setQuery] = useState("");
 
   // Connect App to API
   useEffect(() => {
@@ -47,20 +49,24 @@ export const MainView = () => {
           };
         });
         setMovies(moviesFromApi);
+
       });
   }, [token]);
-  
-  const handleSearch= (e) => {
 
+  const handleSearch = (e) => {
+    
     const query = e.target.value;
+ 
     setQuery(query);
 
-    const storedMovies = JSON.parse(localStorage.getItem("movies"));
+   movies.forEach (item=>{
+    console.log("value:"+ item.title)
+   }    
+   );
 
-    const filteredMovies = storedMovies.filter((movie) => {
-      return ( 
-        movie.title.toLowerCase().inclues(query.to.LowerCase()) ||
-        movie.genre.some((genre) => genre.toLowerCase().includes(query.toLowerCase()))
+    const filteredMovies = movies.filter((movie) => {
+      return (
+        movie.title.includes(query)
       );
     })
 
@@ -183,7 +189,7 @@ export const MainView = () => {
                   <Col>The list is empty!</Col>
                 ) : (
                   <Col md={8}>
-                    <MovieView 
+                    <MovieView
                       movies={movies}
                       removeFav={removeFav}
                       addFav={addFav} />
@@ -205,12 +211,12 @@ export const MainView = () => {
                   <>
                     {movies.map((movie) => (
                       <Col className="mb-4" key={movie._id} md={3}>
-                        <MovieCard 
-                        user={user}
-                        addFav={addFav}
-                        removeFav={removeFav}
-                        movie={movie}
-                         />
+                        <MovieCard
+                          user={user}
+                          addFav={addFav}
+                          removeFav={removeFav}
+                          movie={movie}
+                        />
                       </Col>
                     ))}
                   </>
