@@ -37,9 +37,9 @@ export const SignupView = () => {
             }).then((response) => {
                 if (response.ok) {
                     alert("Signup successful");
-                    window.location.reload();
+                    window.location.href = "/login";
                 } else {
-                    alert(`Signup failed: ${obj.data.message}`);
+                    alert("Signup failed");
                 }
             });
     };

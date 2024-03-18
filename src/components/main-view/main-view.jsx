@@ -19,6 +19,7 @@ export const MainView = () => {
   const [user, setUser] = useState(storedUser ? storedUser : null);
   const [token, setToken] = useState(storedToken ? storedToken : null);
   const [query, setQuery] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
 
   // Connect App to API
   useEffect(() => {
@@ -55,6 +56,7 @@ export const MainView = () => {
 
   const handleSearch = (e) => {
     
+    setSearchTerm(e.target.value);
     const query = e.target.value;
     setQuery(query);
 
@@ -65,10 +67,9 @@ export const MainView = () => {
 
     const filteredMovies = movies.filter((movie) => {
       return (
-        movie.title.includes(query)
+        movie.title.toLowerCase().includes(searchTerm.toLowerCase())
       );
-    })
-
+    });
     setMovies(filteredMovies);
   }
 
