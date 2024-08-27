@@ -54,10 +54,15 @@ MyFlix is a full-stack application built with React, Node.js, Express, and Mongo
 
 
 ### Get data about a single movie by title
+
 **Endpoint:** /movies/:title
+
 **HTTP Method:** GET
+
 **Request body data format:** None
+
 **Response body data format:** A JSON object holding data about a single movie, containing title, genre, director, and featured.
+
 **Response Example:**
 ```
 {
@@ -79,10 +84,15 @@ MyFlix is a full-stack application built with React, Node.js, Express, and Mongo
 ```
 
 ### Get data about a genre by name
+
 **Endpoint:** /movies/:genreName
+
 **HTTP Method:** GET
+
 **Request body data format:** None
+
 **Response body data format:** A JSON object holding data about a movie genre containing name and description.
+
 **Response Example:**
 ```
 {
@@ -92,10 +102,15 @@ MyFlix is a full-stack application built with React, Node.js, Express, and Mongo
 ```
 
 ### Get data about a director by name
+
 **Endpoint:** /movies/:directorName
+
 **HTTP Method:** GET
+
 **Request body data format:** None
+
 **Response body data format:** A JSON object holding data about a single director, containing director name and bio. 
+
 **Response Example:**
 ```
 {
@@ -105,16 +120,26 @@ MyFlix is a full-stack application built with React, Node.js, Express, and Mongo
 ```
 
 ### Get list of all users
+
 **Endpoint:** /users
+
 **HTTP Method:** GET
+
 **Request body data format:** None
+
 **Response body data format:** A JSON object holding data about all users
 
+
 ### Get a user by username
+
 **Endpoint:** /users/:username
+
 **HTTP Method:** GET
+
 **Request body data format:** None
+
 **Response body data format:** A JSON object holding data about the user.
+
 **Response Example:**
 ```
 {
@@ -129,9 +154,13 @@ MyFlix is a full-stack application built with React, Node.js, Express, and Mongo
 ```
 
 ### Add a New User
+
 **Endpoint:** /users
+
 **HTTP Method:** POST
+
 **Request body data format:** JSON object holding data about a user, structured like:
+
 **Request Example:**
 ```
 {
@@ -142,6 +171,7 @@ MyFlix is a full-stack application built with React, Node.js, Express, and Mongo
 }
 ```
 **Response body data format:** A JSON object holding data about the user.
+
 **Response Example:**
 ```
 {
@@ -156,8 +186,11 @@ MyFlix is a full-stack application built with React, Node.js, Express, and Mongo
 ```
 
 ### Update user info by username
+
 **Endpoint:** /users/:username
+
 **HTTP Method:** PUT
+
 **Request body data format:** JSON object holding data to be updated, structured like:
 ```
 {
@@ -168,6 +201,7 @@ MyFlix is a full-stack application built with React, Node.js, Express, and Mongo
 }
 ```
 **Response body data format:** A JSON object holding updated user info
+
 **Response Example:**
 ```
 {
@@ -184,10 +218,15 @@ MyFlix is a full-stack application built with React, Node.js, Express, and Mongo
 ```
 
 ### Add a movie to list of favorites by movie ID
+
 **Endpoint:** /users/:username/movies/:movieID
+
 **HTTP Method:** POST
+
 **Request body data format:** None
+
 **Response body data format:** An updated list of favorite movies
+
 **Response Example:**
 ```
 {
@@ -204,10 +243,15 @@ MyFlix is a full-stack application built with React, Node.js, Express, and Mongo
 ```
 
 ### Delete a movie to list of favorites by movie ID
+
 **Endpoint:** /users/:username/movies/:movieID
+
 **HTTP Method:** DELETE
+
 **Request body data format:** None
+
 **Response body data format:** An updated list of favorite movies
+
 **Response Example:**
 ```
 {
@@ -222,10 +266,15 @@ MyFlix is a full-stack application built with React, Node.js, Express, and Mongo
 ```
 
 ### Delete user by username
+
 **Endpoint:** /users/:username
+
 **HTTP Method:** DELETE
+
 **Request body data format:** None
+
 **Response body data format:** A text message indicating whether the user account was successfully deleted.
+
 **Response Example:**
 ```
 sample01 was deleted
