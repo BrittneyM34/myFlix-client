@@ -281,4 +281,7 @@ sample01 was deleted
 ```
 
 -------------------------
+# Client-Side
+The UI of myFlix is built using the React library. The interface will handle data requested by the user through the REST API endpoints defined above
+
 
