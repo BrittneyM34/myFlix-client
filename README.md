@@ -18,3 +18,63 @@ MyFlix is a full-stack application built with React, Node.js, Express, and Mongo
 - **Backend**: Node.js, Express, MongoDB
 - **Authentification**: JWT ( JSON Web Tokens)
 - **Database**: MongoDB Atlas
+
+## Server-Side
+- Allows users to see a list of all movies in the database
+- Allows users to get detailed information about a single movie by movie title
+- Allows new users to create a user account
+- Allow existing users to update their user info or to delete their account
+- Allow existing users to add movies to their favorites
+- Allow existing users to remove movies from their favorites
+
+## Dependencies 
+- bcrypt
+- body-parser
+- cors
+- express
+- express-validator
+- jsonwebtoken
+- mongoose
+- morgan
+- passport
+- passport-jwt
+- passport-local
+- uuid
+
+## Endpoints
+### Get a list of all movies 
+**Endpoint:** /movies
+**HTTP Method:** GET
+**Request body data format:** None
+**Response body data format:** JSON Object holding data about all movies
+
+### Get data about a single movie by title
+**Endpoint:** /movies/:title
+**HTTP Method:** GET
+**Request body data format:** None
+**Response body data format:** A JSON object holding data about a single movie, containing title, genre, director, and featured.
+**Example:**
+```
+{
+    "genre": {
+        "name": "comedy",
+        "description": "Comedy is a genre of film in which the main emphasis is on humor. These films are designed to make the audience laugh through amusement and most often work by exaggerating characteristics for humorous effect."
+    },
+    "director": {
+        "name": "Burr Steers",
+        "bio": "Burr Gore Steers is an American actor, screenwriter, and director. His films include Igby Goes Down and 17 Again.",
+        "birth": "1965"
+    },
+    "actors": [],
+    "_id": "6571e846ee4021c4a7dd5c1a",
+    "title": "17 Again",
+    "description": "Mike O'Donnell (Matthew Perry) was a high-school basketball star with a bright future, but he threw it all away to marry his girlfriend and raise their child. Almost 20 years later, Mike'/s marriage has failed, his kids think he'/s a loser, and his job is going nowhere. He gets a chance to correct the mistakes of his past and change his life when he is miraculously transformed into a teenager (Zac Efron), but in trying to fix his past, Mike may be jeopardizing his present and future.",
+    "ImagePath": "https://upload.wikimedia.org/wikipedia/en/e/e1/17again.jpg"
+}
+```
+
+
+
+
+
+
