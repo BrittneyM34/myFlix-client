@@ -43,10 +43,15 @@ MyFlix is a full-stack application built with React, Node.js, Express, and Mongo
 
 ## Endpoints
 ### Get a list of all movies 
+
 **Endpoint:** /movies
+
 **HTTP Method:** GET
+
 **Request body data format:** None
+
 **Response body data format:** JSON Object holding data about all movies
+
 
 ### Get data about a single movie by title
 **Endpoint:** /movies/:title
