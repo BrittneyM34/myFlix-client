@@ -16,7 +16,7 @@ MyFlix is a full-stack application built with React, Node.js, Express, and Mongo
 ## Technology Used
 - **Frontend**: React
 - **Backend**: Node.js, Express, MongoDB
-- **Authentification**: JWT ( JSON Web Tokens)
+- **Authentication**: JWT ( JSON Web Tokens)
 - **Database**: MongoDB Atlas
 
 ## Server-Side
